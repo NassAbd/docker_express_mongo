@@ -28,7 +28,7 @@ const User = mongoose.model('User', userSchema);
 
 // Routes CRUD pour les utilisateurs
 
-// 1. Créer un utilisateur
+// Créer un utilisateur
 app.post('/users', async (req, res) => {
   try {
     const { pseudo, password } = req.body;
@@ -40,7 +40,7 @@ app.post('/users', async (req, res) => {
   }
 });
 
-// 2. Lire tous les utilisateurs
+// Lire tous les utilisateurs
 app.get('/users', async (req, res) => {
   try {
     const users = await User.find();
@@ -50,7 +50,7 @@ app.get('/users', async (req, res) => {
   }
 });
 
-// 4. Mettre à jour un utilisateur
+// Mettre à jour un utilisateur
 app.put('/users/:id', async (req, res) => {
   try {
     const { pseudo, password } = req.body;
@@ -68,7 +68,7 @@ app.put('/users/:id', async (req, res) => {
   }
 });
 
-// 5. Supprimer un utilisateur
+// Supprimer un utilisateur
 app.delete('/users/:id', async (req, res) => {
   try {
     const deletedUser = await User.findByIdAndDelete(req.params.id);
