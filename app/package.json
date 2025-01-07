@@ -1,0 +1,14 @@
+{
+    "name": "express-mongodb-app",
+    "version": "1.0.0",
+    "description": "Une application Express avec MongoDB déployée avec Docker Compose",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "mongoose": "^7.0.0"
+    }
+  }
+  
